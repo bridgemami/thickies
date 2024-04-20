@@ -1,0 +1,436 @@
+/*
+Theme Name: Appetizer Child
+Theme URI: https://burgerthemes.com/appetizer-free/
+Template: appetizer
+Author: burgersoftware
+Author URI: https://burgerthemes.com/
+Description: Appetizer is a Creative, Modern, and Professional Restaurant WordPress Theme. The theme is perfect for Restaurants, Fast Food, Seafood restaurants, Recipes, bakeries, burgers, Coffee Shops, Pizza Shops Websites, who need an easy, attractive and effective way to promote your food related services. Checkout Pro Version https://burgerthemes.com/demo/pro/appetizer/
+Tags: one-column,two-columns,left-sidebar,right-sidebar,flexible-header,custom-background,custom-colors,custom-header,custom-menu,featured-image-header,featured-images,footer-widgets,full-width-template,theme-options,threaded-comments,translation-ready,blog,grid-layout,portfolio,photography
+Version: 1.1.8.1712596410
+Updated: 2024-04-08 17:13:30
+*/
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* Variables */
+:root {
+    --pink: #D848b9;
+    --light-blue: #B6E1F4;
+    --white: #fff;
+    --black: #000;
+	--tan: #E8DBDB;
+	--light-black: #404040;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Open Sans', sans-serif !important;
+	font-optical-sizing: auto;
+  	font-weight: 400;
+  	font-style: normal;
+  	font-variation-settings: "wdth" 100;
+}
+
+h1, h2, h3, h4, h5, h6, .wc-block-grid__product-title {
+    font-family: 'Bungee', sans-serif !important;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Links */
+a {
+    color: var(--pink);
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    color: var(--white) ;
+    font-weight: bold;
+}
+
+.hover-heading a {
+	color: var(--tan);
+}
+
+.hover-heading a:hover, .hover-heading a:focus {
+	color: var(--pink) !important;
+	text-decoration: none;
+}
+
+#menu-nav-bar a:hover, #menu-nav-bar a:focus {
+	color: var(--pink);
+	font-weight: bold;
+}
+
+/*Text Styles*/
+.wc-block-grid__product .wc-block-grid__product-title {
+	font-size: 20px;
+}
+
+.woocommerce-Price-amount.amount {
+	font-size: 20px;
+}
+
+.wc-block-components-product-metadata .wc-block-components-product-metadata__description>p{
+	font-weight: bolder;
+}
+
+.wp-elements-0b14834c660f120d296dff3049a509ca a:where(:not(.wp-element-button)) {
+    font-size: 40px;
+}
+
+/* Menu */
+.menu-collapsed {
+    background: url("https://dev-thickies-sandbox.pantheonsite.io/wp-content/uploads/2024/04/mobilefinalicon.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: none;
+}
+
+.top-bun, .bottom-bun, .meat {
+    display: none;
+}
+
+/* Close Button */
+.close-style {
+    border-color: var(--white);
+}
+
+.close-style:before,
+.close-style:after,
+.close-style:hover:before,
+.close-style:hover:after,
+.close-style:focus:before,
+.close-style:focus:after {
+    background: var(--pink);
+}
+
+/*Hero Image*/
+.wp-block-image.alignwide img{
+	border-radius: 20px;
+}
+
+.st-py-default {
+	padding: 20px 0
+}
+
+/* Order & About Container */
+.order-about-container {
+    border-radius: 20px;
+    font-size: .5rem;
+}
+
+/* Homepage Order Container */
+.center-homepage-order-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Tribe Common Styles */
+.tribe-common .tribe-common-h6 {
+    color: var(--light-blue) !important;
+    font-family: 'Bungee', sans-serif;
+    text-align: center;
+}
+
+.tribe-events-widget-events-list__event-date-tag-month,
+.tribe-events-widget-events-list__event-date-tag-daynum {
+    color: var(--light-blue) !important;
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+.tribe-common div,
+.tribe-common a:not(.tribe-common-anchor--unstyle) {
+    color: var(--pink) !important;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.tribe-events .tribe-events-l-container {
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Header Styles */
+.header-one .main-navbar .main-menu .menu-item.active > a, #menu-item-89 > a:active {
+    color: var(--light-blue) !important;
+}
+
+.header-one .main-navbar .main-menu > li.menu-item:not(.focus):not(.active):not(:hover) > a:not(:focus):not(:hover) {
+    color: var(--pink) !important;
+}
+
+/*Background Styles*/
+
+.wp-block-post-template.wp-block-post-template {
+    background: none;
+    border-radius: 20px;
+}
+
+.wp-container-core-columns-is-layout-4.wp-container-core-columns-is-layout-4 {
+	border-radius: 20px;
+}
+
+p.has-background {
+	border-radius: 10px;
+}
+
+/* Cart Styles */
+.menu-right-list li.cart-wrapper .cart-icon-wrap span,
+.shopping-cart .badge,
+div.shopping-cart ul a.remove {
+    color: var(--white) !important;
+    background-color: var(--pink);
+}
+
+.shopping-cart {
+    color: var(--light-blue) !important;
+    background: var(--black);
+    border-top: 3px solid var(--pink);
+}
+
+.cart-wrapper .shopping-cart .shopping-cart-header,
+.shopping-cart .cart-items .quantity,
+.shopping-cart .cart-items .amount {
+    color: var(--white) !important;
+}
+
+.item-img {
+    border-color: var(--pink) !important;
+}
+
+.is-mobile table.wc-block-cart-items .wc-block-cart-items__row {
+	background: rgba(0, 0, 0, 0.3);
+}
+
+.is-mobile table.wc-block-cart-items .wc-block-cart-items__row .wc-block-cart-item__total .wc-block-components-formatted-money-amount{
+	padding-right: 20px;
+}
+
+.post-content {
+   padding-top: 50px;
+}
+
+.woo-shop .product-inner .product-content .woocommerce-Price-amount.amount {
+	background-color: #D848B9;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--pink);
+    border-color: var(--pink);
+		
+}
+.wc-block-grid__product-add-to-cart.wp-block-button .wp-block-button__link:hover {
+	background-color: #D848B9;
+}
+
+div.col-9.my-auto > nav > div.main-menu-right > ul > li > div > ul > a:hover, div.col-9.my-auto > nav > div.main-menu-right > ul > li > div > ul > a:focus {
+	background: var(--light-blue);
+	border-color: var(--light-blue);
+	color: var(--black) !important;
+}
+
+.woocommerce div.product form.cart .button{
+	background-color: #D848B9;
+}
+
+.woo-shop .product-inner .product-content .product-action .button {
+	background-color: #D848B9;
+}
+
+
+/*Cookie Background on Shop Page*/
+.wc-block-grid__products .wc-block-grid__product-image img {
+	background-color: rgba(0, 0, 0, 0.5);
+	border-radius: 20px;
+}
+
+
+
+/* Custom Styling */
+.rita a {
+     font-family: "Yeseva One", serif;
+  	font-weight: 400;
+  	font-style: normal;
+    text-decoration: none;
+    font-size: 3rem;
+}
+
+/* Breadcrumb */
+.breadcrumb-area {
+    position: static;
+    background: url('images/Thickies_LLC_White02.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top right;
+    display: none;
+    padding: 0;
+}
+
+/* Home Banner */
+.home-banner {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    background: url('images/Thickies_LLC_White02.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+/*Image Styles*/
+figure.wp-block-image.alignfull { 
+	border-radius:10px;
+}
+
+.wp-block-image img {
+	border-radius: 20px;
+}
+
+/* Content */
+#content {
+    position: static;
+    background: url('images/cookiebackground.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top right;
+}
+
+/* Post Content */
+.post-content {
+    padding: 0;
+}
+
+.post-items,
+.post-content {
+    background: none;
+    box-shadow: none;
+}
+
+/* Padding */
+.one-em-padding {
+    padding: 1em;
+}
+
+.one-em-padding-y {
+    padding: 1em 0;
+}
+
+/* Responsive */
+.main-mobile-menu ul.main-menu {
+    max-height: 100%;
+}
+
+.main-footer{
+	background: var(--black) !important;
+}
+
+
+.main-footer .footer-main {
+	padding-bottom: 1em;
+}
+
+.footer-copyright {
+	padding: 1em 0;
+}
+
+sbi_follow_btn a:hover {
+	background: var(--light-blue) !important;
+}
+
+.footer-email {
+text-align: left; 
+	font-size: 1.2rem;
+	font-weight: bold;
+	padding-top: 1em
+}
+
+.link-list {
+	padding-bottom: 1em !important;
+}
+
+.footer-copyright {
+	border-top: none !important;
+}
+
+.scrollingUp {
+	display: none;
+}
+
+/*Events Page*/
+.tribe-events .tribe-events-calendar-list-nav {
+	border-top: 1px solid var(--black) !important;
+}
+
+.tribe-events .tribe-events-c-nav__prev:disabled, ul .tribe-common a:not(.tribe-common-anchor--unstyle), .tribe-events .tribe-events-c-nav__next:disabled, .tribe-events .tribe-events-c-nav__next:disabled .tribe-events-c-nav__next-icon-svg path, .tribe-events button.tribe-events-c-nav__next:disabled .tribe-events-c-nav__next-icon-svg path, ul > li.tribe-events-c-nav__list-item.tribe-events-c-nav__list-item--today > a {
+	color: var(--black) !important;
+}
+
+.tribe-common .tribe-common-c-btn-border {
+	background-color: var(--black);
+	border: var(--pink) solid 1px;
+}
+
+.tribe-events .tribe-events-c-subscribe-dropdown .tribe-events-c-subscribe-dropdown__button:hover, .tribe-events .tribe-events-c-subscribe-dropdown .tribe-events-c-subscribe-dropdown__button:focus {
+	background-color: var(--pink);
+	border: var(--black) solid 1px;
+	color: var(--black) !important;
+}
+
+.tribe-events .tribe-events-c-nav__next:disabled .tribe-events-c-nav__next-icon-svg path, .tribe-events button.tribe-events-c-nav__next:disabled .tribe-events-c-nav__next-icon-svg path, .tribe-events .tribe-events-c-nav__prev:disabled .tribe-events-c-nav__prev-icon-svg path, .tribe-events button.tribe-events-c-nav__prev:disabled .tribe-events-c-nav__prev-icon-svg path {
+	fill: var(--black);
+}
+
+@media(min-width: 768px) {
+.footer-main .col-md-6, .footer-copyright .col-md-6 {
+		width: 100% !important;
+		text-align: center;
+	}
+}
+
+@media (min-width: 992px) {
+    /* Add responsive styles here */
+	.footer-main .col-lg-3 {
+		min-width: 100% !important;
+		align-items: center !important;
+	}
+	.email-footer {
+		align-self: center;
+	}
+	.footer-main .instagram-footer {
+		display: flex;
+		align-items: center;
+	}
+	
+	.main-footer .footer-copyright .col-12.text-lg-right {
+		display: none;
+	}
+	
+	.footer-copyright .col-lg-4 {
+		width: 100% !important;
+		text-align: center;
+	}
+	/* Events Page */ 
+	#content > div > div > .tribe-events-header {
+		margin-top: 3em;
+	}
+	
+	#tribe-events-events-bar-search > form > button {
+		background: var(--pink);
+		
+	}
+	
+	#tribe-events-events-bar-search > form > button:hover, #tribe-events-events-bar-search > form > button:focus {
+		background: var(--light-blue);
+		color: var(--black);
+	}
+		
+	.footer-copyright .text-md-center, .footer-copyright .text-md-right {
+		display: none;
+	}
+}
