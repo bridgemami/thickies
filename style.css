@@ -49,8 +49,9 @@ h1, h2, h3, h4, h5, h6, .wc-block-grid__product-title {
     color:var(--pink);
 }
 
-.screen-reader-text, .sbi-screenreader, .tribe-events-c-top-bar__datepicker-input tribe-common-a11y-visual-hide, .tribe-events-c-top-bar__datepicker-input .tribe-common-a11y-visual-hide, button > time > span.tribe-events-c-top-bar__datepicker-mobile {
+.screen-reader-text, .sbi-screenreader, .tribe-events-c-top-bar__datepicker-input tribe-common-a11y-visual-hide, .tribe-events-c-top-bar__datepicker-input .tribe-common-a11y-visual-hide, button > time > span.tribe-events-c-top-bar__datepicker-mobile, .skip-link screen-reader-text, .tribe-events-c-top-bar__datepicker-input.tribe-common-a11y-visual-hide {
 	color: var(--black) !important;
+	background: var(--white);
 }
 
 .a11y-speak-region, .a11y-speak-intro-text {
@@ -83,7 +84,7 @@ a:focus {
 	color: var(--tan);
 }
 
-.hover-heading a:hover, .hover-heading a:focus {
+.hover-heading a:hover, .hover-heading a:focus, div.product-content h5 a:hover, div.product-content h5 a:focus {
 	color: var(--pink) !important;
 	text-decoration: none;
 }
@@ -206,6 +207,12 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+div.wp-block-group.alignwide div.wp-block-group__inner-container.is-layout-constrained.wp-block-group-is-layout-constrained div.wp-block-group.alignwide.is-nowrap.is-layout-flex.wp-container-core-group-is-layout-1.wp-block-group-is-layout-flex div.wp-block-query.is-layout-flow.wp-block-query-is-layout-flow {
+	background: var(--black);
+	border-radius: 10px;
+	padding: 2em 1em 1em 1em;
 }
 
 /* Tribe Common Styles */
@@ -384,7 +391,7 @@ div.shopping-cart ul a.remove {
 	background-color: #D848B9;
 }
 
-.wc-block-cart-item__wrap .wc-block-components-product-name {
+.wc-block-cart-item__wrap .wc-block-components-product-name, article.post-items.post-single div.post-content p strong em {
 	color: var(--black);
 }
 
@@ -505,13 +512,17 @@ video {
 }
 
 
-/* Content */
+/* Page Background */
 #content {
     position: static;
-    background: url('images/cookiebackground.jpg');
+    background: url('images/cookiebackground.jpg'), var(--white);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top right;
+}
+
+body.page-template-default.page.page-id-263.custom-background.wp-custom-logo.theme-appetizer.woocommerce-js.tribe-js.mega-menu-max-mega-menu-1.header-one div#page.site div#content.appetizer-content section#post-section.post-section.st-py-default div.container div.row.g-5.wow.fadeIn div.col-lg-12 article.post-items.post-single {
+	background: var(--black);
 }
 
 .woo-shop .product-inner .product-img {
@@ -543,6 +554,10 @@ video {
 }
 .wp-block-image img {
 	margin-bottom: 25px;
+}
+
+.back-to-terms-and-conditions {
+	
 }
 
 
@@ -611,7 +626,7 @@ text-align: left;
 	padding-bottom: 0 !important;
 }
 
-#footer-section > div.footer-copyright > div > div, #footer-section > div.footer-copyright > div > div > div.col-lg-4.col-md-6.col-12.text-lg-center.text-md-center.text-center, #footer-section > div.footer-copyright > div > div > div.col-lg-4.col-md-6.col-12.text-lg-right.text-md-right.text-center {
+#footer-section > div.footer-copyright > div > div, #footer-section > div.footer-copyright > div > div > div.col-lg-4.col-md-6.col-12.text-lg-center.text-md-center.text-center, #footer-section > div.footer-copyright > div > div > div.col-lg-4.col-md-6.col-12.text-lg-right.text-md-right.text-center, .footer-left-container {
 	margin: 0 !important;
 }
 
@@ -621,6 +636,10 @@ text-align: left;
     justify-content: space-between;
 }
 
+/* This will get rid of the extended footer on the cart page. child(120), child(122) and child(124) is for when you are logged into the admin */
+body > iframe:nth-child(35), body > iframe:nth-child(36), body > iframe:nth-child(92), body > iframe:nth-child(93), body > iframe:nth-child(95), body > iframe:nth-child(108), body > iframe:nth-child(120), body > iframe:nth-child(122), body > iframe:nth-child(124) {
+			height: 0;
+}
 .scrollingUp {
 	display: none;
 }
@@ -697,7 +716,17 @@ text-align: left;
 
 p.cookie-event-info > a {
 	font-weight: bold;
-	
+}
+
+#tribe-events-footer {
+	    border-top: none !important;
+}
+#tribe-events-footer:before, #tribe-events-footer:after {
+	display: none;
+}
+
+#tribe-events-footer > ul > li.tribe-events-nav-previous, #tribe-events-footer > ul > li.tribe-events-nav-next {
+	width: auto !important;
 }
 
 @media(max-width: 600px) {
@@ -705,12 +734,17 @@ p.cookie-event-info > a {
 		font-size: large;
 	}
 	
+	.meet-rita {
+		font-size: xx-large !important;
+		margin: auto;
+	}
+	
 	.wp-block-media-text__media img{
 		margin-top: 25px;
 	}
-	    .wp-block-post-template-is-layout-grid.wp-block-post-template-is-layout-grid.wp-block-post-template-is-layout-grid.wp-block-post-template-is-layout-grid {
+/* 	    .wp-block-post-template-is-layout-grid.wp-block-post-template-is-layout-grid.wp-block-post-template-is-layout-grid.wp-block-post-template-is-layout-grid {
         padding-bottom: 70px;
-    }
+    } */
 	
 	
 }
@@ -752,6 +786,23 @@ p.cookie-event-info > a {
 		margin-bottom:0;
 	}
 }
+/* Individual Cookie Page */
+div.summary.entry-summary > form.cart {
+	display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+}
+
+div.summary.entry-summary > form.cart > button {
+	margin-left: 0;
+}
+
+/*Terms and Conditions */
+section#post-section.post-section.st-py-default div.container div.post-content p a {
+	color: var(--black);
+	text-decoration: underline;
+}
 
 @media(min-width: 767px) {
 	.footer-container {
@@ -768,6 +819,9 @@ p.cookie-event-info > a {
 
 @media (min-width: 992px) {
     /* Add responsive styles here */
+	 #tribe-events-content > p {
+		padding-top: 5em;
+	}
 	.footer-main .col-lg-3 {
 		align-items: center !important;
 	}
@@ -819,11 +873,14 @@ p.cookie-event-info > a {
 	
 	#tribe-events-events-bar-search > form > button {
 		background: var(--pink);
-		
 	}
 		
 	.footer-copyright .text-md-center, .footer-copyright .text-md-right {
 		display: none;
+	}
+	aside div.wp-block-columns.is-layout-flex.wp-container-core-columns-is-layout-6.wp-block-columns-is-layout-flex {
+		margin-bottom: 0;
+    padding: 1em 0;
 	}
 }
 
@@ -832,37 +889,3 @@ p.cookie-event-info > a {
 	
 		font color: green;} 
 
-
-
-
-
-		/* .header-above-btn {
-			display: none !important
-		}
-		
-		.woocommerce ul.products li.product, 
-		.woocommerce-page ul.products li.product {
-		  width: 46% !important;
-		}
-		
-		@media screen and (max-width:768px) {
-		  .woocommerce ul.products[class*=columns-] li.product, 
-		  .woocommerce-page ul.products[class*=columns-] li.product {
-			width: 100% !important;
-		  }
-		}
-		
-		.woo-shop .product-inner .product-content .woocommerce-Price-amount.amount {
-		  width: 70px !important;
-		  height: 70px !important;
-		  line-height: 70px !important;
-		}
-		
-		.woofc-area.woofc-style-01 .woofc-area-mid .woofc-item .woofc-item-inner .woofc-item-info .woofc-item-title a {
-		  font-size: large !important;
-		}
-		
-		
-		.wp-block-woocommerce-checkout-terms-block a {
-		  font-size: large !important;
-		} */
