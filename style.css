@@ -215,16 +215,33 @@ div.wp-block-group.alignwide div.wp-block-group__inner-container.is-layout-const
 	padding: 2em 1em 1em 1em;
 }
 
-/* Tribe Common Styles */
+/* Event Page Styling */
+
+.tribe-common span {
+		font-size: 18px;
+}
+
 .tribe-common .tribe-common-h6 {
     color: var(--light-blue) !important;
     font-family: 'Bungee', sans-serif;
     text-align: center;
 }
 
+.tribe-common .tribe-common-h--alt {
+	font-size: 18px;
+}
+
 
 .tribe-common-c-btn tribe-events-c-search__button {
 	background: var(--black);
+}
+
+.tribe-events .tribe-events-calendar-list__event-date-tag-weekday {
+	font-size: 18px;
+}
+
+button > time > span.tribe-events-c-top-bar__datepicker-mobile {
+	background: none;
 }
 
 /* .tribe-common div time, .tribe-events-widget-events-list__event-date-tag-month,
@@ -371,12 +388,20 @@ div.shopping-cart ul a.remove {
     color: var(--white) !important;
 }
 
+div.wc-block-cart__submit.wp-block-woocommerce-proceed-to-checkout-block > div.wc-block-cart__submit-container.wc-block-cart__submit-container--sticky > a > span {
+	color: var(--pink);
+}
+
+div.wc-block-cart__submit.wp-block-woocommerce-proceed-to-checkout-block > div.wc-block-cart__submit-container.wc-block-cart__submit-container--sticky > a > span:hover, div.wc-block-cart__submit.wp-block-woocommerce-proceed-to-checkout-block > div.wc-block-cart__submit-container.wc-block-cart__submit-container--sticky > a > span:focus {
+	font-weight: bold
+}
+
 .item-img {
     border-color: var(--pink) !important;
 }
 
 .is-mobile table.wc-block-cart-items .wc-block-cart-items__row {
-	background: rgba(0, 0, 0, 0.3);
+	background: none;
 }
 
 .is-mobile table.wc-block-cart-items .wc-block-cart-items__row .wc-block-cart-item__total .wc-block-components-formatted-money-amount{
@@ -636,8 +661,8 @@ text-align: left;
     justify-content: space-between;
 }
 
-/* This will get rid of the extended footer on the cart page. child(120), child(122) and child(124) is for when you are logged into the admin */
-body > iframe:nth-child(35), body > iframe:nth-child(36), body > iframe:nth-child(92), body > iframe:nth-child(93), body > iframe:nth-child(95), body > iframe:nth-child(108), body > iframe:nth-child(120), body > iframe:nth-child(122), body > iframe:nth-child(124) {
+/* This will get rid of the extended footer on the cart page or any other page */
+body > iframe:nth-child(37), body > iframe:nth-child(85), body > iframe:nth-child(90), body > iframe:nth-child(89), body > iframe:nth-child(124), body > iframe:nth-child(126), body > iframe:nth-child(84), body > iframe:nth-child(36), body > iframe:nth-child(96), body > iframe:nth-child(98), body > iframe:nth-child(123), body > iframe:nth-child(124), body > iframe:nth-child(95), body > iframe:nth-child(111), body > iframe:nth-child(116), body > iframe:nth-child(91), body > iframe:nth-child(93), body > iframe:nth-child(121), body > iframe:nth-child(119), body > iframe:nth-child(45), body > iframe:nth-child(43), body > iframe:nth-child(63), body > iframe:nth-child(71), body > iframe:nth-child(73), body > iframe:nth-child(112)  {
 			height: 0;
 }
 .scrollingUp {
@@ -749,6 +774,7 @@ p.cookie-event-info > a {
 	
 }
 @media(max-width: 767px) {
+	
 	#tribe-events-view-selector-content {
 		width:50vw;
 	}
